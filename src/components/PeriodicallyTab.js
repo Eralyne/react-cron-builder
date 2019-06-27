@@ -47,7 +47,7 @@ export default class PeriodicallyTab extends PresetTab {
         const {activeTime, minutes, hours, dayOfWeek, dayOfMonth, month} = this.state;
         return (
             <div {...styleNameFactory('preset')} >
-                <div>
+                <div style={{marginBottom: '-5px'}}>
                     <MultipleSwitcher
                         styleNameFactory={styleNameFactory}
                         isMultiple={this.isMultiple()}

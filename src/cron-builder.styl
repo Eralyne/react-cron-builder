@@ -1,37 +1,60 @@
 @require "constants.styl"
 
+@font-face
+    font-family Geo
+    font-style normal
+    src url(https://fonts.googleapis.com/css?family=Nunito:400,700)
+
 .cron-builder
-    display inline-block
+    display block
     min-height 200px
-    background-color $blue
+    background-color $white
     padding 15px
     color $darkGrey
     font-size 14px
+    flex 1
 
     &__fieldset
-        border-color $darkBlue
-        border-style solid
+        display flex
+        justify-content center
 
     &__legend
-        padding 0 5px
+        display flex
+        justify-content center
 
     &__tab
         height 36px
         font-weight bold
         color inherit
         border none
-        margin .5px
-        background-image $button-bg
+        margin 5px
         cursor pointer
         padding 5px 7px 5px 7px
+        color $darkGrey
+        text-align center
+        white-space nowrap
+        font-size 14px
+        -webkit-appearance none
+        align-items center
+        border 1px solid $lightGrey !important
+        border-radius 4px !important
+        box-shadow: none
+        display inline-flex
+        line-height 1.5
+        position relative
+        vertical-align top
+        background-color $white !important
 
         &:hover:not(&--active)
-            background-image linear-gradient(to bottom, $white, $grey100)
+            background-color $sand !important
+            color $white
+            border none !important
 
         &--active
-            background-color $grey
-            background-image none
+            background-color $sand !important
             cursor default
+            color $white
+            border none !important
 
     &__preset
         min-height 100px
@@ -46,6 +69,7 @@
 
     &__row
         display flex
+        align-items center
 
         &--main
             margin-top 5px
@@ -61,7 +85,7 @@
             align-items flex-end
 
     &__label
-        color $white
+        color $darkGrey
         margin-bottom 3px
         display block
 
@@ -78,8 +102,18 @@
     &__action
         margin 15px auto
         height 40px
-        background-image $button-bg
         border none
+        cursor: pointer
+        justify-content center
+        padding-bottom calc(0.375em - 1px)
+        padding-left 0.75em
+        padding-right 0.75em
+        padding-top calc(0.375em - 1px)
+        text-align center
+        white-space nowrap
+        background-color $green
+        border-color transparent
+        color $white
 
     &__result
         background-color $black
